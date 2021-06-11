@@ -1,3 +1,4 @@
+mod fmt;
 mod iter;
 mod ops;
 

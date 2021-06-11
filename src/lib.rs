@@ -207,6 +207,7 @@
 #[cfg(feature = "std")]
 extern crate std;
 
+mod fmt;
 mod iter;
 mod ops;
 mod prelude;
@@ -232,7 +233,7 @@ use crate::prelude::*;
 /// column-major order.
 ///
 /// See the [crate root][crate] for usage examples.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
+#[derive(Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
 #[repr(transparent)]
 pub struct Matrix<T, const M: usize, const N: usize> {
     data: [[T; M]; N],
